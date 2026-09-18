@@ -13,4 +13,3 @@ if isPrime(num):
 else :
     print("It's not a prime number")
 
-#C:\Users\DEBARATI MUKHERJEE\AppData\Local\Programs\mongosh\
