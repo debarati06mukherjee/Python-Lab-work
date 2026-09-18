@@ -1,31 +1,38 @@
 class Transport:
-
-    def __init__(self, type, value):
+    def __init__(self, type):
         self.type = type
-        self.value = value
-
-    def show(self):
-        print("Type:", self.type)
-        print("Value:", self.value)
 
 
-class Bus(Transport):
-
-    def __init__(self, type, value, seat, source, destination):
-        super().__init__(type, value)
-        self.seat = seat
+class Boat(Transport):
+    def __init__(self, type, capacity, source, destination):
+        super().__init__(type)
+        self.capacity = capacity
         self.source = source
         self.destination = destination
 
-    def display(self):
-        self.show()
-        print("Seat Number:", self.seat)
-        print("Source:", self.source)
-        print("Destination:", self.destination)
+    def show(self):
+        print(f"Details: {self.type}, {self.capacity}, {self.source}, {self.destination}")
 
 
-# Creating Bus object
-bus = Bus("Bus", 500, 20, "Kolkata", "Siliguri")
+class Bus(Transport):
+    def __init__(self, type, seat_no, source, destination):
+        super().__init__(type)
+        self.seat_no = seat_no
+        self.source = source
+        self.destination = destination
 
-# Display all details
-bus.display()
+    def show(self):
+        print(f"Values: {self.type}, {self.seat_no}, {self.source}, {self.destination}")
+
+
+bo1 = Boat("Boat", 28, "Kolkata", "Howrah")
+bo2 = Boat("Boat", 25, "Howrah", "Kolkata")
+
+bo1.show()
+bo2.show()
+
+bu1 = Bus("Bus", 45, "Barasat", "Bongaon")
+bu2 = Bus("Bus", 40, "Barasat", "Neuit...")
+
+bu1.show()
+bu2.show()
