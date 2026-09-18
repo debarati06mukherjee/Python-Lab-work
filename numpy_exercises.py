@@ -1,3 +1,5 @@
+# 2D array of marks
+
 marks = [
     [80, 70, 90],
     [60, 44, 85],
@@ -5,6 +7,7 @@ marks = [
     [55, 13, 70],
     [78, 82, 80]
 ]
+
 
 # i. Maximum marks
 all_marks = []
@@ -28,7 +31,7 @@ print("Average marks:", average)
 
 
 # iv. Maximum marks subject-wise
-print("Maximum marks subject-wise:")
+print("\nMaximum marks subject-wise:")
 
 for j in range(3):
     subject_marks = []
@@ -40,7 +43,7 @@ for j in range(3):
 
 
 # v. Average marks subject-wise
-print("Average marks subject-wise:")
+print("\nAverage marks subject-wise:")
 
 for j in range(3):
     subject_marks = []
@@ -54,34 +57,27 @@ for j in range(3):
 
 
 # vi. Add 10 marks to students scoring less than 50 in Subject 1
-# Subject 1 = 2nd column
-
 for i in range(5):
-    if marks[i][1] < 50:
-        marks[i][1] = marks[i][1] + 10
+    if marks[i][0] < 50:
+        marks[i][0] = marks[i][0] + 10
 
-print("Marks after adding 10 marks:", marks)
+print("\nMarks after adding 10 to Subject 1:")
+print(marks)
 
 
 # vii. Number of students scoring more than 80 in Subject 2
-# Subject 2 = 3rd column
-
 count = 0
 
 for i in range(5):
-    if marks[i][2] > 80:
+    if marks[i][1] > 80:
         count = count + 1
 
-print("Students scoring more than 80 in Subject 2:", count)
+print("\nStudents scoring more than 80 in Subject 2:", count)
 
 
 # viii. Minimum marks of Student 2
-# Student 2 = 3rd row
-
-print("Minimum marks of Student 2:", min(marks[2]))
+print("Minimum marks of Student 2:", min(marks[1]))
 
 
 # ix. Maximum marks of Student 4
-# Student 4 = 5th row
-
-print("Maximum marks of Student 4:", max(marks[4]))
+print("Maximum marks of Student 4:", max(marks[3]))
